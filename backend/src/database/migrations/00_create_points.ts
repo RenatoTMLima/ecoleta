@@ -11,12 +11,9 @@ export async function up(knex: Knex) {
       table.decimal('longitude').notNullable();
       table.string('city').notNullable();
       table.string('uf', 2).notNullable();
-
    })
 }
 
 export async function down(knex: Knex) {
    return knex.schema.dropTable('points');
 }
-
-//Pausado em 1:00:50
